@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>switch Case </title>
+</head>
+<body>
+
+<h2>Teste simples</h2>
+<script type="text/javascript">
+  var color = "red";
+
+  switch (color) {
+    case "orange":
+      document.write("cor laranja");
+      break;
+      case "blue":
+        document.write("cor azul");
+        break;
+        case "red":
+          document.write("cor vermelha");
+          break;
+
+
+    default:
+        document.write("sem cor");
+
+  }
+
+
+</script>
+
+
+
+<h2>Teste teste avançado</h2>
+<input type="text" id="peso" placeholder="Insira o Peso" name="" value="">
+
+<select id="frutas" class="" name="">
+  <option value="maca">maca </option>
+  <option value="limao">limao </option>
+  <option value="laranja">laranja </option>
+  <option value="melancia">melancia </option>
+  <option value="uva">uva </option>
+</select>
+<br>
+<button type="button" name="button" onclick="balanca();" >o Peso</button>
+<br>
+<span id="result"></span>
+
+<script type="text/javascript">
+  function balanca(){
+    var frutas = document.getElementById('frutas').value;
+    var peso = document.getElementById('peso').value;
+    if(!peso){
+      document.getElementById("result").innerHTML = "por favor informe o peso"
+      return;
+    }
+  switch (frutas) {
+    case "maca":
+      document.getElementById("result").innerHTML = "R$ " +peso * 0.35;
+      break;
+    case "limao":
+      document.getElementById("result").innerHTML = "R$ " +peso * 0.59;
+      break;
+    case "laranja":
+      document.getElementById("result").innerHTML = "R$ " +peso * 0.79;
+      break;
+    case "uva":
+      document.getElementById("result").innerHTML = "R$ " +peso * 0.99;
+      break
+      case "melancia":
+        document.getElementById("result").innerHTML = "R$ " +peso * 1.35;
+        break;
+    default:
+      document.getElementById("result").innerHTML = "Produtos nao registrados";
+  }
+
+  }
+
+
+
+</script>
+
+
+</body>
+</html>

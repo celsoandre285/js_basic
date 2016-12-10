@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IF/ ELSE </title>
+</head>
+<body>
+<h2>Teste simples</h2>
+<script type="text/javascript">
+  if(3>=2){
+    document.write("true");
+  }else{
+    document.write("false");
+  }
+
+</script>
+
+
+Calcular troco
+<script type="text/javascript">
+  function troco(valor, dinheiro){
+    if(valor>=dinheiro){
+      document.write("<p>nao precisa de troco</p>");
+      return;
+    }
+    return dinheiro - valor;
+
+  }
+
+  console.log(troco(50, 2));
+</script>
+</body>
+</html>

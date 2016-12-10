@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Busca </title>
+</head>
+<body>
+<input type="text" id="search">
+<button onclick="search()">Buscar</button>
+<br/>
+<strong>Resultado:</strong>
+<br>
+<span id="result"></span>
+
+<script type="text/javascript">
+function search(){
+    var search = document.getElementById("search").value;
+    console.log(search);
+    var arr = ["a content of a blog", "news or an article", "recipe for cake", "programing a tips"]
+    var testKey = null;
+    var result = "";
+
+    for(var key in arr){
+      var auxArr = arr[key].split(" ");
+      for(var key2 in auxArr){
+        if(auxArr.indexOf(search)>-1){
+          if(testKey!=key){
+            testKey = key;
+            result +="<p>"+ arr[key]+"</p>"
+          }
+        }
+      }
+    }
+  document.getElementById("result").innerHTML = result;
+}
+</script>
+</body>
+</html>
